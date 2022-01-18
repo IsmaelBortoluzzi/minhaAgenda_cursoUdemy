@@ -1,4 +1,9 @@
 from django.shortcuts import render
+from .models import Contato
+
 
 def contatos(request):
-    return render(request, 'contatos/contatos.html')
+    contatos = Contato.objects.all()
+    return render(request, 'contatos/contatos.html', {
+        'contatos': contatos,
+    })
