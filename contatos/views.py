@@ -48,6 +48,7 @@ def busca(request):
     #     Q(nome__icontains=termo) | Q(sobrenome__icontains=termo),  # O Q()|Q() serve pra procurar por um OR por outro
     #     mostrar=True
     # )
+    # print(contatos.query)
     paginator = Paginator(contatos, 5)
 
     page = request.GET.get('p')
